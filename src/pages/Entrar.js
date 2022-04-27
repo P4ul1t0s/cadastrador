@@ -1,4 +1,4 @@
-// import styles from './Entrar.module.css';
+import styles from './Entrar.module.css';
 
 function Entrar(){
     return(

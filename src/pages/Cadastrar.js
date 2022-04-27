@@ -1,4 +1,4 @@
-// import styles from './Cadastrar.module.css';
+import styles from './Cadastrar.module.css';
 
 function Cadastrar(){
     return(
