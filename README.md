@@ -15,3 +15,19 @@
 <p>
   Baseado em React App, incluí algumas bibliotecas conhecidas como react-icons, react-router-dom e json-server para o "banco de dados".
 </p>
+
+## To Do List
+
+### Principais
+<ul>
+  <li>Preparar banco de dados</li>
+  <li>Criar métodos de envio e recebimento de dados do BD</li>
+  <li>Criar página de visualização dos cadastros</li>
+</ul>
+
+### Posteriores
+<ul>
+  <li>Criar validações para as entradas nos forms</li>
+  <li>Componentizar elementos repetitivos</li>
+  <li>Enxugar arquivos e organizar o projeto</li>
+</ul>
