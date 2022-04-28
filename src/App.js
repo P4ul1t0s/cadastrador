@@ -7,8 +7,8 @@ import Entrar from './pages/Entrar';
 function App() {
   return (
     <>
-      <div className="ret2"></div>
-      <div className="ret1"></div>
+      {/* <div className="ret2"></div>
+      <div className="ret1"></div> */}
       <section className="section">
         <main>
           <Router>
