@@ -6,6 +6,7 @@ function UserCard({id, username, email, password}){
             <h1>{username}</h1>
             <p>{email}</p>
             <p>{password}</p>
+            {/*<p>{id}</p>*/}
         </div>
     )
 }

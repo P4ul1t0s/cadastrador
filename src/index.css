@@ -6,6 +6,10 @@
   /* color: #eee; */
 }
 
+*:hover{
+  cursor: default;
+}
+
 html, body, #root{
   background-color: #eee;
   height: 100%;

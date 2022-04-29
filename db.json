@@ -27,6 +27,97 @@
       "password1": "testeee",
       "password2": "testeee",
       "id": 3
+    },
+    {
+      "username": "P4ul1t0s",
+      "email": "paulomafra2004@gmail.com",
+      "password1": "123",
+      "password2": "123",
+      "id": 4
+    },
+    {
+      "username": "P4ul1t0s",
+      "email": "teste@",
+      "password1": "111",
+      "password2": "111",
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "email": "paulomafra2004@gmail.com",
+      "password1": "qaa",
+      "password2": "aqa",
+      "id": 6
+    },
+    {
+      "username": "P4ul1t0s",
+      "email": "teste@",
+      "password1": "aa",
+      "password2": "aaaaa",
+      "id": 9
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "teste@",
+      "password1": "aaa",
+      "password2": "asdasdas",
+      "id": 10
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 13
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 14
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 15
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 16
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 17
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "elisabethmafra@gmail.com",
+      "password1": "aa",
+      "password2": "aaa",
+      "id": 18
+    },
+    {
+      "username": "teste01",
+      "email": "teste01",
+      "password1": "teste01",
+      "password2": "teste01",
+      "id": 20
+    },
+    {
+      "username": "aa",
+      "email": "aa",
+      "password1": "aa",
+      "password2": "aa",
+      "id": 21
     }
   ]
 }

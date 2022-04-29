@@ -14,7 +14,8 @@ function App() {
         <main>
           <Router>
               <Routes>
-                <Route path="/" element={<Home/>}/> 
+                <Route exact path="/" element={<Home/>}/> 
+                {/* <Route path="/home" element={<Home/>}/>  */}
                 <Route path="/Cadastrar" element={<Cadastrar/>}/> 
                 <Route path="/Entrar" element={<Entrar/>}/>   
                 <Route path="/Principal" element={<Principal/>}/>   

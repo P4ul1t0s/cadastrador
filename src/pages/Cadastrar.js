@@ -23,8 +23,8 @@ function Cadastrar(){
           body: JSON.stringify(values),
         })
         .then((resp) => resp.json())
-        .then((data) => {navigate('/users')})
-        navigate('/', {state: {}})
+        // .then((data) => {navigate('/users')})
+        navigate('/')
     }
     return(
         <section className={styles.section}>

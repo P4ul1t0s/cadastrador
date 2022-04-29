@@ -11,6 +11,7 @@
 
 .caixa::-webkit-scrollbar{
     width: 0px;
+    overflow: hidden;
 }
 
 /*.caixa::-webkit-scrollbar-track{
@@ -47,8 +48,8 @@
     grid-row-gap: 1em;
     grid-column-gap: 1em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(auto, auto);
     width: 100%;
     height: 100%;
     overflow: auto;
