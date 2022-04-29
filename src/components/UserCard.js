@@ -5,7 +5,7 @@ function UserCard({id, username, email, password}){
         <div className={styles.card}>
             <h1>{username}</h1>
             <p>{email}</p>
-            <p>{password}</p>
+            <p>Senha: {password}</p>
             {/*<p>{id}</p>*/}
         </div>
     )
