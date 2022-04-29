@@ -1,10 +1,12 @@
 import {useState} from 'react';
-// import {useNavigate} from 'react-router';
+import {useNavigate} from 'react-router';
 // import axios from 'axios';
 import styles from './Log.module.css';
 import LinkButton from '../components/LinkButton';
+// import Principal from './Principal';
 
 function Entrar(){
+    const navigate = useNavigate();
     const [values, setValues] = useState()
     const handleChangeValues = (value) => {
         setValues(prevValue => ({
@@ -16,7 +18,14 @@ function Entrar(){
         e.preventDefault();
         const users = await request()
         const currentUser = users.find(user => (user.username === values.username || user.email === values.username) && user.password1 === values.password)
-        console.log(currentUser)
+        
+        try{
+            console.log("Entrou como: " + currentUser.username)
+            navigate('/Principal', {state: {users: users}})
+        }catch(err){
+            // console.log("Usuário não cadastrado ou senha incorreta")´
+            console.log(err)
+        }
     }
     async function request() {
         return await fetch('http://localhost:5001/users', {

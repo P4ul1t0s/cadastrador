@@ -4,7 +4,7 @@ import styles from './Log.module.css';
 import LinkButton from '../components/LinkButton';
 
 function Cadastrar(){
-    const history = useNavigate()
+    const navigate = useNavigate()
     const [values, setValues] = useState()
     const handleChangeValues = (value) => {
         setValues(prevValue => ({
@@ -23,7 +23,8 @@ function Cadastrar(){
           body: JSON.stringify(values),
         })
         .then((resp) => resp.json())
-        .then((data) => {history('/users')})
+        .then((data) => {navigate('/users')})
+        navigate('/', {state: {}})
     }
     return(
         <section className={styles.section}>

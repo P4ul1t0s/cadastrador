@@ -13,6 +13,20 @@
       "password1": "senhaforte",
       "password2": "senhaforte",
       "id": 1
+    },
+    {
+      "username": "Paulo Mafra",
+      "email": "paulo@gmail.com",
+      "password1": "123",
+      "password2": "123",
+      "id": 2
+    },
+    {
+      "username": "Teste",
+      "email": "teste@",
+      "password1": "testeee",
+      "password2": "testeee",
+      "id": 3
     }
   ]
 }

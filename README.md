@@ -21,8 +21,8 @@
 ### Prioritárias
 <ul>
   <li><s>Preparar banco de dados</s></li>
-  <li>Criar métodos de envio e recebimento de dados do BD</li>
-  <li>Criar página de visualização dos cadastros</li>
+  <li><s>Criar métodos de envio e recebimento de dados do BD</s></li>
+  <li><s>Criar página de visualização dos cadastros</s></li>
 </ul>
 
 ### Posteriores
