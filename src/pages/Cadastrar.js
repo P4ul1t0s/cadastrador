@@ -12,7 +12,8 @@ function Cadastrar(){
             [value.target.name]: value.target.value,
         }))
     }
-    const submit = () => {
+    const submit = (e) => {
+        e.preventDefault();
         createPost(values)
     }
     function createPost(values) {
@@ -27,7 +28,7 @@ function Cadastrar(){
     return(
         <section className={styles.section}>
             <h1>Cadastro</h1>
-            <form>
+            <form onSubmit={submit}>
                 <div className={styles.inputDiv}>
                     <p>Insira seu nome de usuário:</p>
                     <input type="text" placeholder="Usuário" name="username" onChange={handleChangeValues}/>
@@ -38,7 +39,7 @@ function Cadastrar(){
                     <p>Confirme sua senha:</p>
                     <input type="password" placeholder="Senha" name="password2" onChange={handleChangeValues}/>
                 </div>
-                <button className={styles.btn} onClick={submit}>Cadastrar</button>
+                <button className={styles.btn} type="submit">Cadastrar</button>
             </form>
             <span/>
             <LinkButton to="/" text="Voltar"/>

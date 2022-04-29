@@ -1,12 +1,10 @@
 import {useState} from 'react';
-import {useNavigate} from 'react-router';
-import axios from 'axios';
+// import {useNavigate} from 'react-router';
+// import axios from 'axios';
 import styles from './Log.module.css';
 import LinkButton from '../components/LinkButton';
 
 function Entrar(){
-    const history = useNavigate()
-    const [users, setUsers] = useState([])
     const [values, setValues] = useState()
     const handleChangeValues = (value) => {
         setValues(prevValue => ({
@@ -17,9 +15,8 @@ function Entrar(){
     const submit = async (e) => {
         e.preventDefault();
         const users = await request()
-        const currentUser = users.find(user => (user.username === values.username) && user.password1 === values.password)
+        const currentUser = users.find(user => (user.username === values.username || user.email === values.username) && user.password1 === values.password)
         console.log(currentUser)
-        console.log(values)
     }
     async function request() {
         return await fetch('http://localhost:5001/users', {
