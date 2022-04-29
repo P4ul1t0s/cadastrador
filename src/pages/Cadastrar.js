@@ -1,21 +1,29 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import {useNavigate} from 'react-router';
 import styles from './Log.module.css';
 import LinkButton from '../components/LinkButton';
 
 function Cadastrar(){
+    const history = useNavigate()
     const [values, setValues] = useState()
-    
     const handleChangeValues = (value) => {
         setValues(prevValue => ({
             ...prevValue, 
             [value.target.name]: value.target.value,
         }))
     }
-    const submit = (e) => {
-        e.preventDefault()
-        console.log(values)
+    const submit = () => {
+        createPost(values)
     }
-
+    function createPost(values) {
+        fetch('http://localhost:5001/users', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(values),
+        })
+        .then((resp) => resp.json())
+        .then((data) => {history('/users')})
+    }
     return(
         <section className={styles.section}>
             <h1>Cadastro</h1>

@@ -1,9 +1,37 @@
 {
-    "users": [
-        {
-            "username": "admin",
-            "email": "admin@admin",
-            "senha": "admin"
-        }
-    ]
+  "users": [
+    {
+      "id": 0,
+      "username": "admin",
+      "email": "admin",
+      "password1": "admin",
+      "password2": "admin"
+    },
+    {
+      "username": "Teste",
+      "email": "teste@",
+      "password1": "123",
+      "password2": "123",
+      "id": 1
+    },
+    {
+      "username": "P4ul1t0s",
+      "email": "paulomafra2004@gmail.com",
+      "password1": "111",
+      "password2": "111",
+      "id": 2
+    },
+    {
+      "username": "paulomafra2004",
+      "email": "yu,",
+      "id": 3
+    },
+    {
+      "username": "Teste",
+      "email": "teste2",
+      "password1": "123",
+      "password2": "123",
+      "id": 4
+    }
+  ]
 }
