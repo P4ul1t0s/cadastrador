@@ -41,6 +41,13 @@
       "password1": "usuau",
       "password2": "usuau",
       "id": 5
+    },
+    {
+      "username": "Vitor",
+      "email": "vitor@gmail.com",
+      "password1": "senha",
+      "password2": "senha",
+      "id": 6
     }
   ]
 }
