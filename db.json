@@ -31,10 +31,22 @@
       "id": 4
     },
     {
-      "username": "ad",
-      "email": "ad",
-      "password": "aa",
+      "username": "teste2",
+      "email": "teste2",
+      "password": "teste2",
       "id": 5
+    },
+    {
+      "username": "re",
+      "email": "re",
+      "password": "ee",
+      "id": 6
+    },
+    {
+      "username": "asd",
+      "email": "asd",
+      "password": "a",
+      "id": 7
     }
   ]
 }

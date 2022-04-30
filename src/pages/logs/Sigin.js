@@ -19,28 +19,39 @@ function Sigin(){
         var currentUser = users.find(user => (user.username === values.username));
         if(!!!currentUser){
             // disponivel para cadastro
-            console.log("user name livre");
             currentUser = users.find(user => (user.email === values.email));
             if(!!!currentUser){
                 // disponivel para cadastro
-            console.log("email lkivre");
                 if(values.password === document.getElementById("passwordField").value){
                     // senhas iguais, realizar cadastro
+                    msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                    title:'Cadastro bem-sucedido!', 
+                    text:'Seu cadastro foi registrado em nosso sistema', 
+                    icon:'success'})
                     createPost(values)
-            console.log("ta bao");
                 }else{
                     // senhas diferentes
-            console.log("senhas diferentte");
+                    msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                    title:'Senhas diferem!', 
+                    text:'As senhas não são iguais, tente novamente', 
+                    icon:'warning'})
                 }
-            }
-            else{
-                // em uso
-            console.log("email em uso");
+            }else{
+                // email em uso
+                msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                title:'Email já cadastrado!', 
+                text:'Experimente ou endereço', 
+                icon:'warning'})
             }
         }else{
-            // em uso
-            console.log("usuario em sus");
+            // user em uso
+            msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+            title:'Usuário já cadastrado!', 
+            text:'Experimente outro apelido', 
+            icon:'warning'})
         }
+        document.getElementById("passwordField").value = "";
+        document.getElementById("passwordField2").value = "";
     }
     async function request() {
         return await fetch('http://localhost:5001/users', {
@@ -69,7 +80,7 @@ function Sigin(){
                     <p>Insira seu email:</p>
                     <input required type="text" placeholder="Email" name="email" onChange={handleChangeValues}/>
                     <p>Insira sua senha:</p>
-                    <input required type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
+                    <input required id="passwordField2" type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
                     <p>Confirme sua senha:</p>
                     <input required id="passwordField" type="password" placeholder="Senha"/>
                 </div>
