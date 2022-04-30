@@ -34,12 +34,16 @@ function Login(){
         // }
 
         const users = await request();
-        const currentUser = users.find(user => (user.username === values.username || user.email === values.username) && user.password1 === values.password);
-        if(!!!currentUser){
-            // algum valor é default
+        const currentUser = users.find(user => user.username === values.username || user.email === values.username);
+        if(!!!currentUser){ //Se currentuser for default, o usuário não foi encontrado
             console.log("Usuário não cadastrado")
         }else{
-            console.log("Usuário encontrado")
+            if(currentUser.password === values.password){
+                console.log("Login válido")
+                navigate('/dashboard', {state: {users: users}})
+            }else{
+                console.log("Senha inválida")
+            }
         }
 
     }
@@ -58,9 +62,9 @@ function Login(){
             <form onSubmit={submit}>
                 <div className={styles.inputDiv}>
                     <p>Insira seu nome de usuário ou email:</p>
-                    <input required id="usernameField" type="text" placeholder="Usuário/Email" name="username" onChange={handleChangeValues}/>
+                    <input required type="text" placeholder="Usuário/Email" name="username" onChange={handleChangeValues}/>
                     <p>Insira sua senha:</p>
-                    <input required id="passwordField" type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
+                    <input required type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
                 </div>
                 <button className={styles.btn} type="submit">Entrar</button>
             </form>

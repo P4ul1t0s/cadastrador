@@ -4,42 +4,36 @@
       "id": 0,
       "username": "admin",
       "email": "admin",
-      "password1": "admin",
-      "password2": "admin"
+      "password": "admin"
     },
     {
       "username": "P4ul1t0s",
       "email": "paulomafra2004@gmail.com",
-      "password1": "senhaforte",
-      "password2": "senhaforte",
+      "password": "senhaforte",
       "id": 1
     },
     {
       "username": "Teste",
       "email": "teste@teste.dominio",
-      "password1": "testeee",
-      "password2": "testeee",
+      "password": "testeee",
       "id": 2
     },
     {
       "username": "Usuário com Nome Longo",
       "email": "o_gmail_tbm_é_grande@hotmail.sc.com.br",
-      "password1": "123",
-      "password2": "123",
+      "password": "123",
       "id": 3
     },
     {
       "username": "Rand0nUs3r",
       "email": "randommail@email.com",
-      "password1": "senha123",
-      "password2": "senha123",
+      "password": "senha123",
       "id": 4
     },
     {
-      "username": "teste2",
-      "email": "teste2",
-      "password1": "teste2",
-      "password2": "teste2",
+      "username": "ad",
+      "email": "ad",
+      "password": "aa",
       "id": 5
     }
   ]
