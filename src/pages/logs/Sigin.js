@@ -22,18 +22,26 @@ function Sigin(){
             currentUser = users.find(user => (user.email === values.email));
             if(!!!currentUser){
                 // disponivel para cadastro
-                if(values.password === document.getElementById("passwordField").value){
-                    // senhas iguais, realizar cadastro
-                    msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                    title:'Cadastro bem-sucedido!', 
-                    text:'Seu cadastro foi registrado em nosso sistema', 
-                    icon:'success'})
-                    createPost(values)
+                if(values.password.length >= 8){
+                    if(values.password === document.getElementById("passwordField").value){
+                        // senhas iguais, realizar cadastro
+                        msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                        title:'Cadastro bem-sucedido!', 
+                        text:'Seu cadastro foi registrado em nosso sistema', 
+                        icon:'success'})
+                        createPost(values)
+                    }else{
+                        // senhas diferentes
+                        msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                        title:'Senhas diferem!', 
+                        text:'As senhas não são iguais, tente novamente', 
+                        icon:'warning'})
+                    }
                 }else{
-                    // senhas diferentes
+                    // senha muito curta
                     msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                    title:'Senhas diferem!', 
-                    text:'As senhas não são iguais, tente novamente', 
+                    title:'Senhas fraca!', 
+                    text:'Sua senha deve ter ao menos 8 caracteres', 
                     icon:'warning'})
                 }
             }else{
