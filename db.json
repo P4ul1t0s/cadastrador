@@ -14,21 +14,15 @@
     },
     {
       "username": "Teste",
-      "email": "teste@teste.dominio",
-      "password": "testeee",
+      "email": "emailteste@hotmail.com",
+      "password": "senhateste",
       "id": 2
     },
     {
-      "username": "Usuário com Nome Longo",
-      "email": "o_gmail_tbm_é_grande@hotmail.sc.com.br",
-      "password": "123",
+      "username": "Nome Sobrenome",
+      "email": "nome.sobrenome@gmail.com",
+      "password": "meuAniversário",
       "id": 3
-    },
-    {
-      "username": "Rand0nUs3r",
-      "email": "randommail@email.com",
-      "password": "senha123",
-      "id": 4
     }
   ]
 }
