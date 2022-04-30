@@ -4,6 +4,7 @@ import styles from './Log.module.css';
 import LinkButton from '../components/LinkButton';
 
 function Cadastrar(){
+    const msg = require('sweetalert2')
     const navigate = useNavigate()
     const [values, setValues] = useState()
     const handleChangeValues = (value) => {
@@ -15,7 +16,7 @@ function Cadastrar(){
     const submit = async (e) => {
         e.preventDefault();
         if(document.getElementById("usernameField").value === "" || document.getElementById("emailField").value === "" || document.getElementById("password2Field").value === "" || document.getElementById("password2Field").value === ""){
-            console.log("Preencha todos os campos corretamente!")
+            msg.fire({title:'Preencha todos os campos!', text:'Verifique se todos os campos estão preenchidos', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
         }else{
             const users = await request()
             try{
@@ -23,22 +24,24 @@ function Cadastrar(){
                 if(currentUser.username === ""){
                     //continua
                 }else{
-                    console.log("Usuário já cadastrado!")
+                    msg.fire({title:'Usuário já cadastrado!', text:'Eperimente outro apelido', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
                 }
             }catch(err){
                 try{
-                    var currentUser = users.find(user => (user.email === document.getElementById("emailField").value))
+                    currentUser = users.find(user => (user.email === document.getElementById("emailField").value))
                     if(currentUser.username === ""){
                         //continua
                     }else{
-                        console.log("Email já cadastrado!")
+                        msg.fire({title:'Email inserido em uso!', text:'Cada cadastro só pode ser vinculado a um email', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
                     }
                 }catch(err){
                     if(document.getElementById("password1Field").value === document.getElementById("password2Field").value){
+                        msg.fire({title:'Cadastro realizado!', text:'Seus dados já foram registrados em nosso sistema', icon:'success', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
                         createPost(values)
-                        console.log("Usuário cadastrado com sucesso!")
                     }else{
-                        console.log("Suas senhas não coincidem!")
+                        msg.fire({title:'Senhas não coincidem!', text:'Escreva a mesma senha nos dois campos', icon:'error', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
+                        document.getElementById("password1Field").value = "";
+                        document.getElementById("password2Field").value = "";
                     }
                 }
             }
