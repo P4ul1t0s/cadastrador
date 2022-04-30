@@ -21,7 +21,7 @@ function Login(){
             // algum valor é default
             msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
             title:'Usuário não encontrado!', 
-            text:'Verifique as informações inseridas', 
+            text:'Verifique as informações inseridas e tente novamente', 
             icon:'warning'})
         }else{
             // cadastro localizado, verificar senha
@@ -36,7 +36,7 @@ function Login(){
                 // senha incorreta
                 msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
                 title:'Senha incorreta!', 
-                text:'Tente novamente', 
+                text:'Verifique as informações inseridas e tente novamente', 
                 icon:'error'})
             }
         }
