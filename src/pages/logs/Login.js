@@ -2,9 +2,15 @@ import {useState} from 'react';
 import {useNavigate} from 'react-router';
 import styles from './Log.module.css';
 import LinkButton from '../../globalComponents/LinkButton';
+import {Message} from '../../globalComponents/Message'
+
+import swal from 'sweetalert'
+// import withReactContent from 'sweetalert2-react-content'
+
 
 function Login(){
-    const msg = require('sweetalert2')
+    // const msg = withReactContent(Swal)
+    // const msg = require('sweetalert2')
     const navigate = useNavigate();
     const [values, setValues] = useState()
     const handleChangeValues = (value) => {
@@ -15,24 +21,6 @@ function Login(){
     }
     const submit = async (e) => {
         e.preventDefault();
-        // if(document.getElementById("usernameField").value === "" || document.getElementById("passwordField").value === ""){
-        //     console.log("Preencha todos os campos corretamente!")
-        //     msg.fire({title:'Preencha todos os campos!', text:'Verifique se todos os campos estão preenchidos', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        // }else{
-        //     const users = await request()
-        //     try{
-        //         const currentUser = users.find(user => (user.username === values.username || user.email === values.username) && user.password1 === values.password)                
-        //         try{
-        //             msg.fire({title:'Sucesso!', text:'Você se cadastrou como ' + currentUser.username, icon:'success', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //             navigate('/dashboard', {state: {users: users}})
-        //         }catch(err){
-        //             msg.fire({title:'Usuário ou senha incorretos!', text:'Verifique se todos os campos estão preenchidos', icon:'error', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //         }
-        //     }catch(err){
-        //         msg.fire({title:'Preencha todos os campos!', text:'Verifique se todos os campos estão preenchidos', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //     }
-        // }
-
         const users = await request();
         const currentUser = users.find(user => user.username === values.username || user.email === values.username);
         if(!!!currentUser){ //Se currentuser for default, o usuário não foi encontrado
@@ -43,9 +31,17 @@ function Login(){
                 navigate('/dashboard', {state: {users: users}})
             }else{
                 console.log("Senha inválida")
+                // Message("Teste", "Texto", "success")
+                swal({
+                    title:"{title}",
+                    text:"{text}",
+                    icon:"success",
+                    color:'#222',
+                    iconColor:'#0088ff',
+                    confirmButtonColor:'#0088ff'
+                })
             }
         }
-
     }
     async function request() {
         return await fetch('http://localhost:5001/users', {
@@ -55,7 +51,6 @@ function Login(){
         .then((resp) => resp.json())
         .then((data) => data)
     }
-
     return(
         <section className={styles.section}>
             <h1>Login</h1>

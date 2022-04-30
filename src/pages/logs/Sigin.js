@@ -15,38 +15,6 @@ function Sigin(){
     }
     const submit = async (e) => {
         e.preventDefault();
-        // if(document.getElementById("usernameField").value === "" || document.getElementById("emailField").value === "" || document.getElementById("password2Field").value === "" || document.getElementById("password2Field").value === ""){
-        //     msg.fire({title:'Preencha todos os campos!', text:'Verifique se todos os campos estão preenchidos', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        // }else{
-        //     const users = await request()
-        //     try{
-        //         var currentUser = users.find(user => (user.username === document.getElementById("usernameField").value))
-        //         if(currentUser.username === ""){
-        //             //continua
-        //         }else{
-        //             msg.fire({title:'Usuário já cadastrado!', text:'Eperimente outro apelido', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //         }
-        //     }catch(err){
-        //         try{
-        //             currentUser = users.find(user => (user.email === document.getElementById("emailField").value))
-        //             if(currentUser.username === ""){
-        //                 //continua
-        //             }else{
-        //                 msg.fire({title:'Email inserido em uso!', text:'Cada cadastro só pode ser vinculado a um email', icon:'warning', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //             }
-        //         }catch(err){
-        //             if(document.getElementById("password1Field").value === document.getElementById("password2Field").value){
-        //                 msg.fire({title:'Cadastro realizado!', text:'Seus dados já foram registrados em nosso sistema', icon:'success', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //                 createPost(values)
-        //             }else{
-        //                 msg.fire({title:'Senhas não coincidem!', text:'Escreva a mesma senha nos dois campos', icon:'error', color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff'})
-        //                 document.getElementById("password1Field").value = "";
-        //                 document.getElementById("password2Field").value = "";
-        //             }
-        //         }
-        //     }
-        // }
-
         const users = await request();
         var currentUser = users.find(user => (user.username === values.username));
         if(!!!currentUser){
@@ -89,7 +57,6 @@ function Sigin(){
           body: JSON.stringify(values),
         })
         .then((resp) => resp.json())
-        // .then((data) => {navigate('/users')})
         navigate('/')
     }
     return(
