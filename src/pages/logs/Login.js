@@ -31,7 +31,7 @@ function Login(){
                 title:'Login bem-sucedido!', 
                 text:'Bem-vindo, ' + currentUser.username + '!', 
                 icon:'success'})
-                navigate('\dashboard');
+                navigate('/dashboard', {state: {users: users}});
             }else{
                 // senha incorreta
                 msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',

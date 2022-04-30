@@ -17,7 +17,7 @@ function Dashboard(){
             </div>
             <div className={styles.caixa}>
                 {users.length > 0 && users.map((user) => (
-                <UserCard id={user.id} username={user.username} email={user.email} password={user.password1}/>))}
+                <UserCard id={user.id} username={user.username} email={user.email} password={user.password}/>))}
             </div>
             <LinkButton to="/" text="Voltar"/>
         </section>

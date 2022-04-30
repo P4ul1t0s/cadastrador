@@ -30,5 +30,5 @@
   <li><s>Criar validações para as entradas nos forms</s></li>
   <li><s>Exibir mensagens de confirmação para o usuário</s></li>
   <li>Componentizar elementos repetitivos</li>
-  <li>Enxugar arquivos e organizar o projeto</li>
+  <li><s>Enxugar arquivos e organizar o projeto</s></li>
 </ul>
