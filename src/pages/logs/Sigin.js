@@ -26,37 +26,52 @@ function Sigin(){
                 if(!!!currentUser){
                     // disponivel para cadastro
                     if(values.password.length >= 8){
-                        if(values.password === document.getElementById("passwordField").value){
-                            // senhas iguais, realizar cadastro
-                            msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                            title:'Cadastro bem-sucedido!', 
-                            text:'Seu cadastro foi registrado em nosso sistema', 
-                            icon:'success'})
-                            createPost(values)
+                        // senha de tamanho aceitavel
+                        if(values.password.indexOf(" ") === -1){
+                            //senha não tem espaços
+                            if(values.password === document.getElementById("passwordField").value){
+                                // senhas iguais, realizar cadastro
+                                msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                                title:'Cadastro bem-sucedido!', 
+                                text:'Seu cadastro foi registrado em nosso sistema', 
+                                icon:'success'})
+                                createPost(values)
+                            }else{
+                                // senhas diferentes
+                                msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                                title:'Senhas diferem!', 
+                                text:'As senhas não são iguais, tente novamente', 
+                                icon:'warning'})
+                            }
                         }else{
-                            // senhas diferentes
+                            // senha tem espaços
                             msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                            title:'Senhas diferem!', 
-                            text:'As senhas não são iguais, tente novamente', 
-                            icon:'warning'})
-                        }}else{
-                            // senha muito curta
-                            msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                            title:'Senhas fraca!', 
-                            text:'Sua senha deve ter ao menos 8 caracteres', 
-                            icon:'warning'})
-                    }}else{
+                            title:'Senha inválida!', 
+                            text:'Sua senha não pode conter espaços', 
+                            icon:'error'})
+                        }
+                    }else{
+                        // senha muito curta
+                        msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                        title:'Senhas fraca!', 
+                        text:'Sua senha deve ter ao menos 8 caracteres', 
+                        icon:'warning'})
+                    }
+                }else{
                         // email em uso
                         msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
                         title:'Email já cadastrado!', 
                         text:'Experimente outro endereço', 
                         icon:'warning'})
-                }}else{
+                }
+            }else{
+                    //email invalido
                     msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
                     title:'Email inválido!', 
                     text:'Experimente outro endereço', 
                     icon:'error'})
-            }}else{
+            }
+        }else{
                 // user em uso
                 msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
                 title:'Usuário já cadastrado!', 
@@ -97,15 +112,38 @@ function Sigin(){
             <form onSubmit={submit}>
                 <div className={styles.inputDiv}>
                     <p>Insira seu nome de usuário:</p>
-                    <input required type="text" placeholder="Usuário" name="username" onChange={handleChangeValues}/>
+                    <input required
+                        type="text" 
+                        placeholder="Usuário" 
+                        name="username" 
+                        onChange={handleChangeValues}
+                    />
                     <p>Insira seu email:</p>
-                    <input required type="text" placeholder="Email" name="email" onChange={handleChangeValues}/>
+                    <input required 
+                        type="text" 
+                        placeholder="Email" 
+                        name="email" 
+                        onChange={handleChangeValues}
+                    />
                     <p>Insira sua senha:</p>
-                    <input required id="passwordField2" type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
+                    <input required 
+                        id="passwordField2" 
+                        type="password" 
+                        placeholder="Senha" 
+                        name="password" 
+                        onChange={handleChangeValues} 
+                    />
                     <p>Confirme sua senha:</p>
-                    <input required id="passwordField" type="password" placeholder="Senha"/>
+                    <input required 
+                        id="passwordField" 
+                        type="password" 
+                        placeholder="Confirmar" 
+                    />
                 </div>
-                <button className={styles.btn} type="submit">Cadastrar</button>
+                <button 
+                    className={styles.btn} 
+                    type="submit">Cadastrar
+                </button>
             </form>
             <span/>
             <LinkButton to="/" text="Voltar"/>

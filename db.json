@@ -11,6 +11,18 @@
       "email": "paulomafra2004@gmail.com",
       "password": "senhaforte",
       "id": 1
+    },
+    {
+      "username": "Teste",
+      "email": "emailteste@hotmail.com",
+      "password": "senhateste",
+      "id": 2
+    },
+    {
+      "username": "Nome Sobrenome",
+      "email": "nome.sobrenome@gmail.com",
+      "password": "meuAniversário",
+      "id": 3
     }
   ]
 }
