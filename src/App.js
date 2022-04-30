@@ -1,24 +1,21 @@
+import './structureStyles/App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './App.css';
-import Home from './pages/Home';
-import Cadastrar from './pages/Cadastrar';
-import Entrar from './pages/Entrar';
-import Principal from './pages/Principal';
+import Home from './pages/home/Home'
+import Sigin from './pages/logs/Sigin';
+import Login from './pages/logs/Login';
+import Dashboard from './pages/dashboard/page/Dashboard';
 
 function App() {
   return (
     <>
-      {/* <div className="ret2"></div>
-      <div className="ret1"></div> */}
       <section className="section">
         <main>
           <Router>
               <Routes>
-                <Route exact path="/" element={<Home/>}/> 
-                {/* <Route path="/home" element={<Home/>}/>  */}
-                <Route path="/Cadastrar" element={<Cadastrar/>}/> 
-                <Route path="/Entrar" element={<Entrar/>}/>   
-                <Route path="/Principal" element={<Principal/>}/>   
+                <Route exact path="/" element={<Home/>}/>
+                <Route path="/sigin" element={<Sigin/>}/> 
+                <Route path="/login" element={<Login/>}/>   
+                <Route path="/dashboard" element={<Dashboard/>}/>   
               </Routes>
           </Router>
         </main>
