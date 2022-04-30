@@ -13,7 +13,7 @@
 ## Plataformas
 
 <p>
-  Baseado em React App, incluí algumas bibliotecas conhecidas como react-icons, react-router-dom e o prórpio react
+  Baseado em React App, incluí algumas bibliotecas conhecidas como react-icons, react-router-dom, json-server e o prórpio react
 </p>
 
 ## To Do List
@@ -27,7 +27,7 @@
 
 ### Posteriores
 <ul>
-  <li>Criar validações para as entradas nos forms</li>
+  <li><s>Criar validações para as entradas nos forms</s></li>
   <li>Exibir mensagens de confirmação para o usuário</li>
   <li>Componentizar elementos repetitivos</li>
   <li>Enxugar arquivos e organizar o projeto</li>

@@ -1,0 +1,13 @@
+.div{
+    height: 100px;
+    width: 400px;
+    background-color: #eee;
+}
+
+.error{
+    background-color: red;
+}
+
+.success{
+    background-color: aqua;
+}
