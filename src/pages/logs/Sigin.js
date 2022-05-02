@@ -60,25 +60,25 @@ function Sigin(){
                             icon:'warning'})
                         }
                     }else{
-                            // email em uso
-                            msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                            title:'Email já cadastrado!', 
-                            text:'Experimente outro endereço', 
-                            icon:'warning'})
+                        // email em uso
+                        msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                        title:'Email já cadastrado!', 
+                        text:'Experimente outro endereço', 
+                        icon:'warning'})
                     }
                 }else{
-                        //email invalido
-                        msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                        title:'Email inválido!', 
-                        text:'Experimente outro endereço', 
-                        icon:'error'})
+                    //email invalido
+                    msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                    title:'Email inválido!', 
+                    text:'Experimente outro endereço', 
+                    icon:'error'})
                 }
             }else{
-                    // user em uso
-                    msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
-                    title:'Usuário já cadastrado!', 
-                    text:'Experimente outro apelido', 
-                    icon:'warning'})
+                // user em uso
+                msg.fire({color:'#222', iconColor:'#0088ff', confirmButtonColor:'#0088ff',
+                title:'Usuário já cadastrado!', 
+                text:'Experimente outro apelido', 
+                icon:'warning'})
             }
         }else{
             // user tem espaços
@@ -148,10 +148,12 @@ function Sigin(){
                         type="password" 
                         placeholder="Confirmar" 
                     />
+
                 </div>
                 <button 
                     className={styles.btn} 
-                    type="submit">Cadastrar
+                    type="submit">
+                    Cadastrar
                 </button>
             </form>
             <span/>

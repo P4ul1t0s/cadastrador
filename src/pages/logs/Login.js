@@ -56,9 +56,20 @@ function Login(){
             <form onSubmit={submit}>
                 <div className={styles.inputDiv}>
                     <p>Insira seu nome de usuário ou email:</p>
-                    <input required type="text" placeholder="Usuário/Email" name="username" onChange={handleChangeValues}/>
+                    <input required 
+                        type="text" 
+                        placeholder="Usuário/Email" 
+                        name="username" 
+                        onChange={handleChangeValues}
+                    />
                     <p>Insira sua senha:</p>
-                    <input required id="passwordField" type="password" placeholder="Senha" name="password" onChange={handleChangeValues}/>
+                    <input required 
+                        id="passwordField" 
+                        type="password" 
+                        placeholder="Senha" 
+                        name="password" 
+                        onChange={handleChangeValues}
+                    />
                 </div>
                 <button className={styles.btn} type="submit">Entrar</button>
             </form>
